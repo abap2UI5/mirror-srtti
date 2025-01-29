@@ -1,7 +1,7 @@
 "! <p class="shorttext synchronized" lang="en">Serializable RTTI structure</p>
-CLASS zcl_srtti_structdescr DEFINITION
+CLASS z2ui5_cl_srtti_structdescr DEFINITION
   PUBLIC
-  INHERITING FROM zcl_srtti_complexdescr
+  INHERITING FROM z2ui5_cl_srtti_complexdescr
   CREATE PUBLIC.
 
   PUBLIC SECTION.
@@ -9,7 +9,7 @@ CLASS zcl_srtti_structdescr DEFINITION
     TYPES:
       BEGIN OF sabap_componentdescr,
         name       TYPE string,
-        type       TYPE REF TO zcl_srtti_datadescr,
+        type       TYPE REF TO z2ui5_cl_srtti_datadescr,
         as_include TYPE abap_bool,
         suffix     TYPE string,
       END OF sabap_componentdescr.
@@ -30,11 +30,11 @@ CLASS zcl_srtti_structdescr DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_srtti_structdescr IMPLEMENTATION.
+CLASS z2ui5_cl_srtti_structdescr IMPLEMENTATION.
   METHOD constructor.
     DATA components_rtti TYPE abap_component_tab.
     DATA scomponent      TYPE sabap_componentdescr.
-    DATA scomponent_rtti TYPE REF TO zcl_srtti_datadescr.
+    DATA scomponent_rtti TYPE REF TO z2ui5_cl_srtti_datadescr.
 
     FIELD-SYMBOLS <component> TYPE abap_componentdescr.
 
@@ -50,7 +50,7 @@ CLASS zcl_srtti_structdescr IMPLEMENTATION.
       CLEAR scomponent.
       scomponent-name = <component>-name.
 
-      scomponent_rtti ?= zcl_srtti_datadescr=>create_by_rtti( <component>-type ).
+      scomponent_rtti ?= z2ui5_cl_srtti_datadescr=>create_by_rtti( <component>-type ).
       scomponent-type       = scomponent_rtti.
       scomponent-as_include = <component>-as_include.
       scomponent-suffix     = <component>-suffix.

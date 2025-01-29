@@ -1,5 +1,5 @@
 "! <p class="shorttext synchronized" lang="en">Serializable RTTI any type</p>
-CLASS zcl_srtti_typedescr DEFINITION
+CLASS z2ui5_cl_srtti_typedescr DEFINITION
   PUBLIC
   CREATE PUBLIC.
 
@@ -28,19 +28,19 @@ CLASS zcl_srtti_typedescr DEFINITION
       IMPORTING
         !rtti TYPE REF TO cl_abap_typedescr
       RETURNING
-        VALUE(srtti) TYPE REF TO zcl_srtti_typedescr.
+        VALUE(srtti) TYPE REF TO z2ui5_cl_srtti_typedescr.
     CLASS-METHODS create_by_data_object
       IMPORTING
         !data_object TYPE any
       RETURNING
-        VALUE(srtti) TYPE REF TO zcl_srtti_typedescr.
+        VALUE(srtti) TYPE REF TO z2ui5_cl_srtti_typedescr.
   PROTECTED SECTION.
   PRIVATE SECTION.
 
 ENDCLASS.
 
 
-CLASS zcl_srtti_typedescr IMPLEMENTATION.
+CLASS z2ui5_cl_srtti_typedescr IMPLEMENTATION.
   METHOD constructor.
     absolute_name = rtti->absolute_name.
     type_kind     = rtti->type_kind.
@@ -69,42 +69,42 @@ CLASS zcl_srtti_typedescr IMPLEMENTATION.
       WHEN cl_abap_typedescr=>kind_elem.
 
         elem_rtti ?= rtti.
-        CREATE OBJECT srtti TYPE zcl_srtti_elemdescr
+        CREATE OBJECT srtti TYPE z2ui5_cl_srtti_elemdescr
           EXPORTING rtti = elem_rtti.
 
       WHEN cl_abap_typedescr=>kind_struct.
 
         struct_rtti ?= rtti.
-        CREATE OBJECT srtti TYPE zcl_srtti_structdescr
+        CREATE OBJECT srtti TYPE z2ui5_cl_srtti_structdescr
           EXPORTING rtti = struct_rtti.
 
       WHEN cl_abap_typedescr=>kind_table.
 
         table_rtti ?= rtti.
-        CREATE OBJECT srtti TYPE zcl_srtti_tabledescr
+        CREATE OBJECT srtti TYPE z2ui5_cl_srtti_tabledescr
           EXPORTING rtti = table_rtti.
 
       WHEN cl_abap_typedescr=>kind_ref.
 
         ref_rtti ?= rtti.
-        CREATE OBJECT srtti TYPE zcl_srtti_refdescr
+        CREATE OBJECT srtti TYPE z2ui5_cl_srtti_refdescr
           EXPORTING rtti = ref_rtti.
 
       WHEN cl_abap_typedescr=>kind_class.
 
         class_rtti ?= rtti.
-        CREATE OBJECT srtti TYPE zcl_srtti_classdescr
+        CREATE OBJECT srtti TYPE z2ui5_cl_srtti_classdescr
           EXPORTING rtti = class_rtti.
 
       WHEN cl_abap_typedescr=>kind_intf.
 
         intf_rtti ?= rtti.
-        CREATE OBJECT srtti TYPE zcl_srtti_intfdescr
+        CREATE OBJECT srtti TYPE z2ui5_cl_srtti_intfdescr
           EXPORTING rtti = intf_rtti.
 
       WHEN OTHERS.
         " Unsupported (new ABAP features in the future)
-        RAISE EXCEPTION TYPE zcx_srtti.
+        RAISE EXCEPTION TYPE z2ui5_cx_srtti.
     ENDCASE.
   ENDMETHOD.
 

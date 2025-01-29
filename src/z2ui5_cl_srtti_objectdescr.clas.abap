@@ -1,7 +1,7 @@
 "! <p class="shorttext synchronized" lang="en">Serializable RTTI object type</p>
-class ZCL_SRTTI_OBJECTDESCR definition
+class z2ui5_cl_srtti_objectdescr definition
   public
-  inheriting from ZCL_SRTTI_TYPEDESCR
+  inheriting from z2ui5_cl_srtti_typedescr
   create public .
 
 public section.
@@ -21,7 +21,7 @@ ENDCLASS.
 
 
 
-CLASS ZCL_SRTTI_OBJECTDESCR IMPLEMENTATION.
+CLASS z2ui5_cl_srtti_objectdescr IMPLEMENTATION.
 
 
   METHOD constructor.

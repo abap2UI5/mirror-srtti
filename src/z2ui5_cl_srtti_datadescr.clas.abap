@@ -1,7 +1,7 @@
 "! <p class="shorttext synchronized" lang="en">Serializable RTTI data object</p>
-CLASS zcl_srtti_datadescr DEFINITION
+CLASS z2ui5_cl_srtti_datadescr DEFINITION
   PUBLIC
-  INHERITING FROM zcl_srtti_typedescr
+  INHERITING FROM z2ui5_cl_srtti_typedescr
   CREATE PUBLIC .
 
   PUBLIC SECTION.
@@ -11,5 +11,5 @@ ENDCLASS.
 
 
 
-CLASS zcl_srtti_datadescr IMPLEMENTATION.
+CLASS z2ui5_cl_srtti_datadescr IMPLEMENTATION.
 ENDCLASS.

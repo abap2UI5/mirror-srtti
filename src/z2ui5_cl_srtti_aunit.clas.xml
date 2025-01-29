@@ -3,9 +3,10 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_SRTTI_STRUCTDESCR</CLSNAME>
+    <CLSNAME>Z2UI5_CL_SRTTI_AUNIT</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Serializable RTTI structure</DESCRIPT>
+    <DESCRIPT>Test class</DESCRIPT>
+    <CATEGORY>05</CATEGORY>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
