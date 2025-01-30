@@ -19,6 +19,7 @@ jobs:
     - name: run
       run: |
         npm i
+        npm install @abaplint/cli -g
         npm run clone
         npm run rename
         npm run cleanup
