@@ -1,24 +1,24 @@
 {
-    "name": "srtti_mirror",
-    "private": true,
-    "version": "1.0.0",
-    "description": "Mirror of (srtti)[https://github.com/sandraros/S-RTTI.git] mirror to z2ui5_ namespace",
-    "scripts": {
-      "clone": "git clone --branch 7.40 https://github.com/sandraros/S-RTTI.git input",
-      "rename": "abaplint abaplint_rename.json --rename && rm src/* && cp output/input/src/* src/",
-      "cleanup": "rm -rf input && rm -rf output"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/abapGit/ajson_mirror.git"
-    },
-    "author": "",
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/abapGit/ajson_mirror/issues"
-    },
-    "homepage": "https://github.com/abapGit/ajson_mirror#readme",
-    "dependencies": {
-      "@abaplint/cli": "^2.113.85"
-    }
+  "name": "srtti_mirror",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Mirror of (ajson)[https://github.com/sbcgua/ajson] mirror to z2ui5_ namespace",
+  "scripts": {
+    "clone": "git clone --branch 7.40 https://github.com/sandraros/S-RTTI.git input",
+    "rename": "abaplint abaplint_rename.json --rename && rm src/* && cp output/input/src/* src/",
+    "cleanup": "rm -rf input && rm -rf output"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abapGit/ajson_mirror.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abapGit/ajson_mirror/issues"
+  },
+  "homepage": "https://github.com/abapGit/ajson_mirror#readme",
+  "dependencies": {
+    "@abaplint/cli": "^2.113.85"
   }
+}
