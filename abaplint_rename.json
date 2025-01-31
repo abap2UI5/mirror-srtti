@@ -16,7 +16,7 @@
     ],
     "rename": {
       "output": "output",
-      "patterns": [{"type": "CLAS|INTF", "oldName": "z(.*)_srtti", "newName": "z2ui5_$1_srtti"}]
+      "patterns": [{"type": "CLAS|INTF", "oldName": "z(.*)_srtti", "newName": "z2ui5_$1_srt"}]
     },
     "syntax": {
       "version": "v702",
