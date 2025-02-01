@@ -86,15 +86,15 @@
     "if_in_if": true,
     "implement_methods": true,
     "in_statement_indentation": false,
-    "indentation": true,
+    "indentation": false,
     "inline_data_old_versions": true,
     "keep_single_parameter_on_one_line": {
       "exclude": [],
       "severity": "Error",
       "length": 120
     },
-    "keyword_case": true,
-    "line_break_multiple_parameters": true,
+    "keyword_case": false,
+    "line_break_multiple_parameters": false,
     "line_break_style": false,
     "line_length": false,
     "line_only_punc": false,
