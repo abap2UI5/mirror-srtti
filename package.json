@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "Mirror of (ajson)[https://github.com/sbcgua/ajson] mirror to z2ui5_ namespace",
   "scripts": {
-    "clone": "git clone --branch 7.40 https://github.com/sandraros/S-RTTI.git input && rm input/src/*testclasses.abap && npm install @abaplint/cli -g && abaplint --fix",
+    "clone": "git clone --branch 7.40 https://github.com/sandraros/S-RTTI.git input  && npm install @abaplint/cli -g && abaplint --fix",
+    "delete_unit_tests": "find src -name '*testclasses.abap' -exec rm {} + && find src -type f -exec sed -i '/<WITH_UNIT_TESTS>X<\\/WITH_UNIT_TESTS>/d' {} +",
     "rename": "abaplint abaplint_rename.json --rename && rm src/* && cp output/input/src/* src/",
     "cleanup": "rm -rf input && rm -rf output"
   },
