@@ -21,9 +21,12 @@ jobs:
       with:
         node-version: '22'
     - name: run
+      # npm ci installs exactly the committed package-lock.json, and the
+      # scripts run the abaplint it pins (node_modules/.bin) - never a global
+      # install of whatever version is latest, not in a job that holds a
+      # token that can write to this repository.
       run: |
-        npm i
-        npm install @abaplint/cli -g
+        npm ci
         npm run clone
         npm run rename
         npm run delete_unit_tests
