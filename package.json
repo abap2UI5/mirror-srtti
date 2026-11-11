@@ -7,6 +7,7 @@
     "clone": "git clone --branch 7.40 https://github.com/sandraros/S-RTTI.git input  && abaplint --fix",
     "delete_unit_tests": "find src -name '*testclasses.abap' -exec rm {} + && find src -type f -exec sed -i '/<WITH_UNIT_TESTS>X<\\/WITH_UNIT_TESTS>/d' {} +",
     "rename": "abaplint abaplint_rename.json --rename && rm src/* && cp output/input/src/* src/",
+    "patch": "node .github/scripts/patch.mjs",
     "cleanup": "rm -rf input && rm -rf output"
   },
   "repository": {
