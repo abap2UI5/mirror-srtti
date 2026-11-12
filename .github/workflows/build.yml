@@ -30,6 +30,7 @@ jobs:
         npm run clone
         npm run rename
         npm run delete_unit_tests
+        npm run fix_result
         npm run patch
         npm run cleanup
         git status
